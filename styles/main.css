@@ -1,0 +1,87 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #121212;
+  color: white;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.navbar {
+  width: 100%;
+  background: #1e1e1e;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls button {
+  margin: 5px;
+  background: #282828;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls input[type="range"] {
+  vertical-align: middle;
+}
+
+.instruments {
+  margin-top: 30px;
+  width: 90%;
+}
+
+.instrument-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label {
+  width: 100px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(16, 30px);
+  grid-gap: 5px;
+}
+
+.grid-cell {
+  width: 30px;
+  height: 30px;
+  background: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.grid-cell.active {
+  background: #00ffcc;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.mute-btn {
+  margin-left: 10px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: auto;
+  background: #1e1e1e;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}

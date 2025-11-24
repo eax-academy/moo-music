@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MooMusic</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="MooMusic Logo">
+      <h1>MooMusic</h1>
+    </div>
+    <div class="controls">
+      <button id="btn-play">▶️ Play</button>
+      <button id="btn-pause">⏸ Pause</button>
+      <button id="btn-stop">⏹ Stop</button>
+      <button id="btn-clear">🧹 Clear</button>
+      <button id="btn-save">💾 Save</button>
+      <button id="btn-load">📂 Load</button>
+      <label for="tempo">Tempo (BPM):</label>
+      <input type="range" id="tempo" min="60" max="180" value="120">
+      <span id="bpm-display">120</span>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="instruments">
+      <div class="instrument-row" data-track="drums">
+        <div class="label">🥁 Drums</div>
+        <div class="grid" id="grid-drums"></div>
+        <input type="range" min="0" max="1" step="0.1" value="1" class="volume-slider" title="Volume">
+        <button class="mute-btn">🔇</button>
+      </div>
+
+      <div class="instrument-row" data-track="bass">
+        <div class="label">🎸 Bass</div>
+        <div class="grid" id="grid-bass"></div>
+        <input type="range" min="0" max="1" step="0.1" value="1" class="volume-slider">
+        <button class="mute-btn">🔇</button>
+      </div>
+
+      <div class="instrument-row" data-track="melody">
+        <div class="label">🎹 Melody</div>
+        <div class="grid" id="grid-melody"></div>
+        <input type="range" min="0" max="1" step="0.1" value="1" class="volume-slider">
+        <button class="mute-btn">🔇</button>
+      </div>
+
+      <div class="instrument-row" data-track="vocals">
+        <div class="label">🎤 Vocals</div>
+        <div class="grid" id="grid-vocals"></div>
+        <input type="range" min="0" max="1" step="0.1" value="1" class="volume-slider">
+        <button class="mute-btn">🔇</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 MooMusic — Create, Loop, Play!</p>
+  </footer>
+
+  <script src="scripts/app.js"></script>
+  <script src="scripts/grid.js"></script>
+  <script src="scripts/audio.js"></script>
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/ui.js"></script>
+</body>
+</html>
